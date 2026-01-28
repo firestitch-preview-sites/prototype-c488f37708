@@ -1,0 +1,244 @@
+<div class="account-container">
+  <header class="account-header">
+    <h1>My Account Section</h1>
+    <p class="subtitle">Manage your profile and account settings</p>
+  </header>
+
+  <div class="account-grid">
+    <!-- Personal Information -->
+    <div class="account-card">
+      <h2>Personal Information</h2>
+      <div class="info-row">
+        <span class="label">Full Name:</span>
+        <span class="value">{{ userData.name }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Email:</span>
+        <span class="value">{{ userData.email }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Phone:</span>
+        <span class="value">{{ userData.phone }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Date of Birth:</span>
+        <span class="value">{{ userData.dateOfBirth }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Gender:</span>
+        <span class="value">{{ userData.gender }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Account Type:</span>
+        <span class="value status premium">{{ userData.accountType }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Member Since:</span>
+        <span class="value">{{ userData.memberSince }}</span>
+      </div>
+    </div>
+
+    <!-- Contact & Address -->
+    <div class="account-card">
+      <h2>Address Information</h2>
+      <div class="info-row">
+        <span class="label">Street:</span>
+        <span class="value">{{ userData.address.street }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">City:</span>
+        <span class="value">{{ userData.address.city }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">State:</span>
+        <span class="value">{{ userData.address.state }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">ZIP Code:</span>
+        <span class="value">{{ userData.address.zipCode }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Country:</span>
+        <span class="value">{{ userData.address.country }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Emergency Contact:</span>
+        <span class="value">{{ userData.emergencyContact.name }} ({{ userData.emergencyContact.relation }})</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Emergency Phone:</span>
+        <span class="value">{{ userData.emergencyContact.phone }}</span>
+      </div>
+    </div>
+
+    <!-- Employment Information -->
+    <div class="account-card">
+      <h2>Employment Information</h2>
+      <div class="info-row">
+        <span class="label">Company:</span>
+        <span class="value">{{ userData.employment.company }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Position:</span>
+        <span class="value">{{ userData.employment.position }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Department:</span>
+        <span class="value">{{ userData.employment.department }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Start Date:</span>
+        <span class="value">{{ userData.employment.startDate }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Salary:</span>
+        <span class="value">{{ userData.employment.salary }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Employee ID:</span>
+        <span class="value">{{ userData.employment.employeeId }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Manager:</span>
+        <span class="value">{{ userData.employment.manager }}</span>
+      </div>
+    </div>
+
+    <!-- Account Statistics -->
+    <div class="account-card">
+      <h2>Account Statistics</h2>
+      <div class="info-row">
+        <span class="label">Last Login:</span>
+        <span class="value">{{ userData.statistics.lastLogin }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Total Logins:</span>
+        <span class="value">{{ userData.statistics.totalLogins }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Profile Views:</span>
+        <span class="value">{{ userData.statistics.profileViews }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Messages Sent:</span>
+        <span class="value">{{ userData.statistics.messagesSent }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Files Uploaded:</span>
+        <span class="value">{{ userData.statistics.filesUploaded }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Storage Used:</span>
+        <span class="value">{{ userData.statistics.storageUsed }}</span>
+      </div>
+    </div>
+
+    <!-- Financial Information -->
+    <div class="account-card">
+      <h2>Financial Information</h2>
+      <div class="info-row">
+        <span class="label">Account Balance:</span>
+        <span class="value balance-positive">{{ userData.financial.accountBalance }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Monthly Spending:</span>
+        <span class="value">{{ userData.financial.monthlySpending }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Credit Score:</span>
+        <span class="value credit-excellent">{{ userData.financial.creditScore }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Payment Method:</span>
+        <span class="value">{{ userData.financial.paymentMethod }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Next Billing Date:</span>
+        <span class="value">{{ userData.financial.nextBilling }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Subscription Status:</span>
+        <span class="value status active">{{ userData.financial.subscriptionStatus }}</span>
+      </div>
+    </div>
+
+    <!-- Preferences & Settings -->
+    <div class="account-card">
+      <h2>Preferences & Settings</h2>
+      <div class="info-row">
+        <span class="label">Language:</span>
+        <span class="value">{{ userData.preferences.language }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Timezone:</span>
+        <span class="value">{{ userData.preferences.timezone }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Theme:</span>
+        <span class="value">{{ userData.preferences.theme }}</span>
+      </div>
+      <div class="info-row">
+        <span class="label">Email Notifications:</span>
+        <span class="value" [class]="userData.preferences.notifications ? 'status active' : 'status inactive'">
+          {{ userData.preferences.notifications ? 'Enabled' : 'Disabled' }}
+        </span>
+      </div>
+      <div class="info-row">
+        <span class="label">Newsletter:</span>
+        <span class="value" [class]="userData.preferences.newsletter ? 'status active' : 'status inactive'">
+          {{ userData.preferences.newsletter ? 'Subscribed' : 'Unsubscribed' }}
+        </span>
+      </div>
+      <div class="info-row">
+        <span class="label">Marketing Emails:</span>
+        <span class="value" [class]="userData.preferences.marketingEmails ? 'status active' : 'status inactive'">
+          {{ userData.preferences.marketingEmails ? 'Enabled' : 'Disabled' }}
+        </span>
+      </div>
+      <div class="info-row">
+        <span class="label">SMS Notifications:</span>
+        <span class="value" [class]="userData.preferences.smsNotifications ? 'status active' : 'status inactive'">
+          {{ userData.preferences.smsNotifications ? 'Enabled' : 'Disabled' }}
+        </span>
+      </div>
+    </div>
+
+    <!-- Recent Activity -->
+    <div class="account-card activity-card">
+      <h2>Recent Activity</h2>
+      <div class="activity-list">
+        <div class="activity-item" *ngFor="let activity of userData.recentActivity">
+          <div class="activity-icon">📋</div>
+          <div class="activity-details">
+            <div class="activity-action">{{ activity.action }}</div>
+            <div class="activity-date">{{ activity.date }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Connected Accounts -->
+    <div class="account-card">
+      <h2>Connected Accounts</h2>
+      <div class="connected-accounts">
+        <div class="connected-item" *ngFor="let account of userData.connectedAccounts">
+          <div class="account-icon">{{ account.icon }}</div>
+          <div class="account-info">
+            <div class="account-name">{{ account.platform }}</div>
+            <div class="account-status" [class]="account.connected ? 'connected' : 'disconnected'">
+              {{ account.connected ? 'Connected' : 'Disconnected' }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <button class="btn btn-primary">Edit Profile</button>
+    <button class="btn btn-secondary">Change Password</button>
+    <button class="btn btn-secondary">Privacy Settings</button>
+    <button class="btn btn-outline">Download Data</button>
+    <button class="btn btn-danger">Deactivate Account</button>
+  </div>
+</div>
